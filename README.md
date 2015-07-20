@@ -17,7 +17,7 @@ This is a README file for the data cleaning and collation script 'run_analysis.R
   g. Load the ~\train\X_train.txt containing the 561 vectors of measurements
   h. Merge the columns in e, f, and g to arrive at the train data set
   i. Merge the test and train data sets using rbind to arrive at a combined data set
-2. Replace the Activity labels 
+2. Replace the Activity identifiers 
 ```
 
 <http://rmarkdown.rstudio.com>.
