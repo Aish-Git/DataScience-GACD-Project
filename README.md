@@ -4,34 +4,25 @@ author: "Aish Varadhan"
 date: "July 19, 2015"
 ---
 
-This is a README file for the data cleaning and collation script 'run_analysis.R' that performs the following functions on the wearables data set that has been downloaded to the local disk based off the data from <https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip>
+This is a README file for the data cleaning and collation script 'run_analysis.R' that transforms and tidies the wearables data set that has been downloaded to the local disk based off the data from <https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip>
 
+How to Run the Script?
 ```{r}
-1. Merges the ~\test and \~train data sets in the following manner
-  a. Load the ~\test\y_test.txt containing the activity identifiers
-  b. Load the ~\test\subject_test.txt containing the subject identifiers
-  c. Load the ~\test\X_test.txt containing the 561 vectors of measurements
-  d. Merge the columns in a, b, and c to arrive at the test data set
-  e. Load the ~\train\y_train.txt containing the activity identifiers
-  f. Load the ~\train\subject_train.txt containing the subject identifiers
-  g. Load the ~\train\X_train.txt containing the 561 vectors of measurements
-  h. Merge the columns in e, f, and g to arrive at the train data set
-  i. Merge the test and train data sets using rbind to arrive at a combined data set
-2. Replace the Activity identifiers 
+1. Clone the <https://github.com/Aish-Git/DataScience-GACD-Project> repo to your local disk
+2. Ensure that you have run_analysis.R file downloaded to the local disk
+3. Source the file 'run_analysis.R' and you should see a function called process_data() loaded
+4. If the data is in the working directory under the default folder titled 'UCI HAR Dataset'
+  a. Execute process_data() with no arguments as the script uses defaults
+  b. The script will send informational messages to the console and finish up with a "Done!"
+  c. A filed called 'tidy_data.txt' should be created under the 'UCI HAR Dataset' folder
+4. If the data is in a diferent directory and called differently,
+  a. Execute process_data() by specifying the following
+      working_dir: the location to your working dir (if the script is in a diff location)
+      data_root_dir: the relative path (MUST BE RELATIVE TO working_dir) to the data folder
+  b. The script will send informational messages to the console and finish up with a "Done!"
+  c. A filed called 'tidy_data.txt' should be created under the specified data_root_dir folder
+5. Enjoy!
 ```
 
-<http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r}
-summary(cars)
-```
-
-You can also embed plots, for example:
-
-```{r, echo=FALSE}
-plot(cars)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+Thank you!
+Aish Varadhan
